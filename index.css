@@ -1,17 +1,18 @@
-#iphone {
+#phone {
+	height: 667px;
+	width: 395px;    
+}
+
+.phone_container {
+	margin-left: 50%;
+	transform: translate(-50%,0);
+	overflow: hidden;
 	height: 667px;
 	width: 375px;
-	border: 20px solid black;
-	border-radius: 20px;
-
-    margin: 40px 0 0 50%;
-    
-	transform: translate(-50%, 0);
 }
 
-#iphone::-webkit-scrollbar {
-	display: none;
-}
+.element::-webkit-scrollbar { width: 0 !important }
+
 
 #add_url {
 	height: 40px;
