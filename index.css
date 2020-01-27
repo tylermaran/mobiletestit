@@ -1,0 +1,26 @@
+#iphone {
+	height: 667px;
+	width: 375px;
+	border: 20px solid black;
+	border-radius: 20px;
+
+    margin: 40px 0 0 50%;
+    
+	transform: translate(-50%, 0);
+}
+
+#iphone::-webkit-scrollbar {
+	display: none;
+}
+
+#add_url {
+	height: 40px;
+	margin: 0;
+}
+
+#url_input {
+	width: 40%;
+	margin: 50px 0 0 30%;
+	height: 40px;
+	font-size: 30px;
+}
