@@ -1,0 +1,63 @@
+
+.title {
+	text-align: left;
+	margin: 0;
+	font-style: italic;
+	/* display: inline; */
+}
+
+.header {
+	margin: 0 0 40px 0;
+	padding: 20px 0 60px 0;
+	background-color: rgb(39, 39, 66);
+	text-align: center;
+	color: white;
+}
+
+.input_bar {
+	height: 50px;
+	width: 100%;
+}
+
+.input_header {
+	text-align: left;
+	margin-left: 28%;
+	color: white;
+	font-size: 20px;
+}
+
+#url_input {
+	display: inline-block;
+	width: 40%;
+	height: 44px;
+	font-size: 30px;
+	vertical-align: top;
+	border-top-left-radius: 15px;
+	border-bottom-left-radius: 15px;
+	-webkit-box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.75);
+	box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.75);
+}
+
+#add_url {
+	background-color: rgb(78, 78, 255);
+	display: inline-block;
+	height: 100%;
+	width: 5%;
+	margin: 0 0 0 -10px;
+	border-top-right-radius: 15px;
+	border-bottom-right-radius: 15px;
+	line-height: 48px;
+	font-weight: bold;
+	color: white;
+	font-size: 30px;
+	text-align: center;
+	-webkit-box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.75);
+	box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.75);
+}
+
+#add_url:hover {
+	background-color: rgb(89, 89, 255);
+	border: 0.5px dotted;
+}

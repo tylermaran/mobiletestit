@@ -4,66 +4,34 @@ body {
 	font-family: Arial, Helvetica, sans-serif;
 }
 
-.header {
-	margin: 0 0 40px 0;
-	padding: 20px 0 60px 0;
-	background-color: rgb(39, 39, 66);
+#rotate_button {
+	margin: 0 auto 10px auto;
+	height: 70px;
+	width: 70px;
 	text-align: center;
-	color: white;
-}
-
-.input_bar {
-	height: 50px;
-	width: 100%;
-}
-
-.input_header {
-	text-align: left;
-	margin-left: 28%;
-	color: white;
-	font-size: 20px;
-}
-
-#url_input {
-	display: inline-block;
-	width: 40%;
-	height: 44px;
-	font-size: 30px;
-	/* margin: 0 0 0 27.5%; */
-	vertical-align: top;
-	border-top-left-radius: 15px;
-	border-bottom-left-radius: 15px;
-	-webkit-box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.75);
-	-moz-box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.75);
-	box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.75);
-}
-
-#add_url {
-	background-color: rgb(78, 78, 255);
-	display: inline-block;
-	height: 100%;
-	width: 5%;
-	margin: 0 0 0 -10px;
-	border-top-right-radius: 15px;
-	border-bottom-right-radius: 15px;
-
 	font-weight: bold;
 	color: white;
-	font-size: 30px;
-	text-align: center;
-	-webkit-box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.75);
-	-moz-box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.75);
-	box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.75);
+	background-color: rgb(39, 39, 66);
+	border-radius: 50px;
+	background-image: url('./images/rotate_white.png');
+	background-position: center;
+	background-size: 50px;
+	background-repeat: no-repeat;
+
+	transition: transform 0.2s alternate;
 }
 
-#add_url:hover {
-	background-color: rgb(89, 89, 255);
-	border: 0.5px dotted;
+#rotate_button:hover {
+	background-color: rgb(58, 58, 97);
+	cursor: pointer;
 }
 
-.phone_container {
-	margin: 0 0 0 50%;
-	transform: translate(-50%, 0);
+.rotate_onclick {
+	transform: rotate(10deg);
+}
+
+#phone_container {
+	margin: 0 auto 0 auto;
 	background-color: black;
 	width: 400px;
 	border-radius: 30px;
@@ -73,11 +41,17 @@ body {
 	-webkit-box-shadow: inset 0px 0px 5px 5px rgba(255, 255, 255, 0.25);
 	-moz-box-shadow: inset 0px 0px 5px 5px rgba(255, 255, 255, 0.25);
 	box-shadow: inset 0px 0px 5px 5px rgba(255, 255, 255, 0.25);
+
+	transition: transform 0.5s linear;
+	transform-origin: center center;
 }
 
-.view_container {
-	margin-left: 50%;
-	transform: translate(-50%, 0);
+.phone-rotate {
+	transform: rotate(90deg);
+}
+
+#view_container {
+	margin: 0 auto;
 	background-color: white;
 	overflow: hidden;
 	height: 667px;
@@ -89,7 +63,7 @@ body {
 	height: 10px;
 	width: 375px;
 	margin: 0 0 0 50%;
-	transform: translate(-50%,0);
+	transform: translate(-50%, 0);
 	font-size: 10px;
 	font-weight: bold;
 	color: white;
@@ -107,7 +81,6 @@ body {
 	width: 20%;
 	background-color: rgb(53, 53, 53);
 	margin: 20px auto;
-	
 }
 
 .iphone_home {
@@ -130,8 +103,26 @@ body {
 	font-size: 20px;
 }
 
-
 .phone_stats {
 	height: 200px;
 }
 
+#select_common_model {
+	text-align: center;
+}
+
+.mini_phone {
+	display: inline-block;
+	height: 200px;
+	width: 110px;
+	background-color: black;
+	border-radius: 10px;
+	margin: 40px;
+	overflow: hidden;
+	color: white;
+	border: 2px solid grey;
+}
+
+.mini_phone:hover {
+	cursor: pointer;
+}
