@@ -2,6 +2,12 @@
 	text-align: center;
 }
 
+.small_header {
+	text-align: left;
+	margin: 0 0 0 20%;
+	font-style: italic;
+}
+
 .mini_phone_container {
 	display: inline-block;
 }
@@ -11,7 +17,7 @@
 	width: 110px;
 	background-color: black;
 	border-radius: 10px;
-	margin: 40px 40px 10px 40px;
+	margin: 20px 40px 10px 40px;
 	overflow: hidden;
 	color: white;
 	border: 2px solid grey;

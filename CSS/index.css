@@ -4,6 +4,13 @@ body {
 	font-family: Arial, Helvetica, sans-serif;
 }
 
+hr {
+	width: 60%;
+	margin: 20px 0 20px 20%;
+	border: 1.5px solid grey;
+	border-radius: 1px;
+}
+
 #rotate_button {
 	margin: 0 auto 10px auto;
 	height: 70px;
@@ -13,7 +20,7 @@ body {
 	color: white;
 	background-color: rgb(39, 39, 66);
 	border-radius: 50px;
-	background-image: url('./images/rotate_white.png');
+	background-image: url('../images/rotate_white.png');
 	background-position: center;
 	background-size: 50px;
 	background-repeat: no-repeat;
@@ -56,6 +63,12 @@ body {
 	overflow: hidden;
 	height: 667px;
 	width: 375px;
+}
+
+#iframe {
+	position: relative;
+	height: 100%;
+	width: 100%;
 }
 
 #phone_time,
@@ -103,6 +116,8 @@ body {
 	font-size: 20px;
 }
 
-.phone_stats {
-	height: 200px;
+.content {
+	height: 400px;
+	width: 60%;
+	margin: 20px 0 0 20%;
 }

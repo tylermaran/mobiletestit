@@ -40,7 +40,6 @@ let common_models = [
 
 
 const highlight_phone = (div) => {
-	
 
 	let temp = document.getElementsByClassName('mini_screen');
 
@@ -51,6 +50,7 @@ const highlight_phone = (div) => {
 	div.firstChild.style.backgroundColor = 'white';
 
 }
+
 
 // Generate the mini phone divs
 for (let i = 0; i < common_models.length; i++) {
@@ -87,6 +87,7 @@ for (let i = 0; i < common_models.length; i++) {
 
 select_common_model.append(common_models_div);
 
+
 // Rotate screen
 rotate_button.onclick = () => {
 	phone_container.classList.toggle('phone-rotate');
@@ -96,6 +97,7 @@ rotate_button.onclick = () => {
 		rotate_button.classList.toggle('rotate_onclick');
 	}, 200);
 };
+
 
 // Add new url to iFrame
 const update_frame = url => {

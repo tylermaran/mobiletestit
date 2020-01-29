@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="shortcut icon" href="phone_icon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="./images/phone_icon.ico" type="image/x-icon">
 
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -18,15 +18,16 @@
         gtag('config', 'UA-154562513-3');
     </script>
 
-    <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="header.css">
-    <link rel="stylesheet" href="mini_phone.css">
+    <link rel="stylesheet" href="./CSS/index.css">
+    <link rel="stylesheet" href="./CSS/header.css">
+    <link rel="stylesheet" href="./CSS/mini_phone.css">
 
     <title>Mobile Test it!</title>
 </head>
 
 <body>
 
+    <!-- Header -->
     <div class="header">
         <h1 class="title">mobiletest.it</h1>
         <h1 class="sub_title">Test mobile responsive web pages.</h1>
@@ -42,14 +43,14 @@
 
     </div>
 
+    <!-- Phone display -->
     <div id="rotate_button"></div>
     <div id="phone_container">
         <div class="phone_volume"></div>
         <div id="phone_time">3:30 PM</div>
         <div id="phone_address">www.example.com</div>
         <div id="view_container">
-
-            <iframe src="https://www.example.com" id="phone" frameborder="0" scrolling="yes"></iframe>
+            <iframe src="https://www.example.com" id="iframe" frameborder="0" scrolling="yes"></iframe>
         </div>
         <div class="iphone_home"></div>
     </div>
@@ -58,15 +59,26 @@
         iPhone 6/7/8 : 375 x 667
     </div>
 
+    <!-- Top Phone Models -->
     <div id="select_common_model">
-
-
+        <h3 class="small_header">Most popular phones:</h3>
     </div>
 
-    <div class="phone_stats">
+    <hr>
 
-
+    <div class="phone_stats content">
+        <h2>Top phone models of 2020:</h2>
+        <h3>The most common phone sizes in the US [2020 Update]</h3>
     </div>
+
+    <hr>
+
+    <div class="about content">
+        <h2>About the site:</h2>
+        <h3>Mobiletest.it is a free resource to testing mobile responsive web pages.</h3>
+    </div>
+
+    <hr>
 
     <script src="script.js"></script>
 </body>
