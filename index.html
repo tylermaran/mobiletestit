@@ -17,6 +17,7 @@
 
         gtag('config', 'UA-154562513-3');
     </script>
+    
 
     <link rel="stylesheet" href="./CSS/index.css">
     <link rel="stylesheet" href="./CSS/header.css">
@@ -39,6 +40,15 @@
             </div>
             <input type="text" id="url_input" value="https://www.example.com">
             <div id="add_url">test</div>
+        </div>
+        <div class="common_links">
+            Try:
+            <div class="localhost" onclick="localhost(3000)">
+                localhost:3000
+            </div>
+            <div class="localhost" onclick="localhost(8000)">
+                localhost:8000
+            </div>
         </div>
 
     </div>
@@ -69,6 +79,73 @@
     <div class="phone_stats content">
         <h2>Top phone models of 2020:</h2>
         <h3>The most common phone sizes in the US [2020 Update]</h3>
+        <table class="top_phones">
+            <tr>
+                <th>
+                    Device
+                </th>
+                <th>
+                    Web resolution
+                </th>
+                <th>
+                    Native Scale
+                </th>
+            </tr>
+
+            <tr>
+                <td>iPhone X</td>
+                <td>375 x 812</td>
+                <td>3.0</td>
+            </tr>
+            <tr>
+                <td>iPhone 6/7/8</td>
+                <td>375 x 667</td>
+                <td>3.0</td>
+            </tr>
+            <tr>
+                <td>iPhone 6/7/8 Plus</td>
+                <td>414 x 736</td>
+                <td>3.0</td>
+            </tr>
+            <tr>
+                <td>iPhone SE</td>
+                <td>320 x 568</td>
+                <td>3.0</td>
+            </tr>
+            <tr>
+                <td>Galaxy S5</td>
+                <td>360 x 640</td>
+                <td>3.0</td>
+            </tr>
+            <tr>
+                <td>Pixel 2</td>
+                <td>411 x 731</td>
+                <td>3.0</td>
+            </tr>
+            <tr>
+                <td>Pixel 2 XL</td>
+                <td>411 x 823</td>
+                <td>3.0</td>
+            </tr>
+            <tr>
+                <td class="tb_space" colspan="3"></td>
+                <!-- <td>Pixel 2 XL</td>
+                <td>411 x 823</td>
+                <td>3.0</td> -->
+            </tr>
+            <tr>
+                <td>iPad Pro 10.5-inch</td>
+                <td>1112 x 834</td>
+                <td>2.0</td>
+            </tr>
+            <tr></tr>
+        </table>
+
+        <div class="annotations">
+            [1] - Native Scale refers to the mapping of web pixels to native pixels. Ex: iPhone X has a native
+            resolution of 1125 x 2436 but 375 x 812 addressable pixels.
+        </div>
+
     </div>
 
     <hr>
@@ -76,11 +153,26 @@
     <div class="about content">
         <h2>About the site:</h2>
         <h3>Mobiletest.it is a free resource to testing mobile responsive web pages.</h3>
+
+        <!-- Place this tag where you want the button to render. -->
+        <a class="github-button" href="https://github.com/tylermaran/mobiletestit"
+            data-color-scheme="no-preference: light; light: light; dark: light;" data-size="large"
+            data-show-count="true" aria-label="Star tylermaran/mobiletestit on GitHub">Star</a>
     </div>
 
     <hr>
 
+    <div class="resources content">
+        <h2>Resources:</h2>
+        <h3>Mobiletest.it is a free resource to testing mobile responsive web pages.</h3>
+
+        
+    </div>
+
     <script src="script.js"></script>
+
+    <!-- Github Star link -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
 </body>
 
 </html>

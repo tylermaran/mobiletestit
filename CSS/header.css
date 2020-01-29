@@ -10,7 +10,7 @@
 
 .header {
 	margin: 0 0 40px 0;
-	padding: 20px 0 60px 0;
+	padding: 20px 0 40px 0;
 	background-color: rgb(39, 39, 66);
 	text-align: center;
 	color: white;
@@ -62,4 +62,15 @@
 #add_url:hover {
 	background-color: rgb(89, 89, 255);
 	border: 0.5px dotted;
+}
+
+.common_links {
+	width: 40%;
+	margin: 50px 0 0 30%;
+	text-align: left;
+}
+
+.localhost {
+	display: inline-block;
+	margin: 0 0 0 20px;
 }

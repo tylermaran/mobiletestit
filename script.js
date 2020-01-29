@@ -1,5 +1,5 @@
 let submit = document.getElementById('add_url');
-let iframe = document.getElementById('phone');
+let iframe = document.getElementById('iframe');
 let url_input = document.getElementById('url_input');
 let phone_time = document.getElementById('phone_time');
 let phone_address = document.getElementById('phone_address');
@@ -9,6 +9,11 @@ let view_container = document.getElementById('view_container');
 let select_common_model = document.getElementById('select_common_model');
 let common_models_div = document.createElement('div');
 let flip;
+
+const localhost = port => {
+	console.log(port);
+	url_input.value = 'localhost:' + port;
+};
 
 let common_models = [
 	{
@@ -38,9 +43,7 @@ let common_models = [
 	},
 ];
 
-
-const highlight_phone = (div) => {
-
+const highlight_phone = div => {
 	let temp = document.getElementsByClassName('mini_screen');
 
 	// let selected = document.get
@@ -48,9 +51,7 @@ const highlight_phone = (div) => {
 		temp[i].style.backgroundColor = 'rgb(112, 112, 112)';
 	}
 	div.firstChild.style.backgroundColor = 'white';
-
-}
-
+};
 
 // Generate the mini phone divs
 for (let i = 0; i < common_models.length; i++) {
@@ -62,7 +63,7 @@ for (let i = 0; i < common_models.length; i++) {
 
 	mini_phone.setAttribute('name', common_models[i].name);
 
-	mini_phone.onclick = function () {
+	mini_phone.onclick = function() {
 		highlight_phone(this);
 	};
 
@@ -87,7 +88,6 @@ for (let i = 0; i < common_models.length; i++) {
 
 select_common_model.append(common_models_div);
 
-
 // Rotate screen
 rotate_button.onclick = () => {
 	phone_container.classList.toggle('phone-rotate');
@@ -98,13 +98,18 @@ rotate_button.onclick = () => {
 	}, 200);
 };
 
-
 // Add new url to iFrame
 const update_frame = url => {
-	url = url.split('//')[1];
-
-	iframe.src = 'https://' + url;
-	phone_address.innerHTML = url;
+	if (url.split('//')[1]) {
+		
+		iframe.src = 'https://' + url.split('//')[1];
+		phone_address.innerHTML = url.split('//')[1];
+	}
+	else {
+		console.log(url)
+		iframe.src = 'https://' + url;
+		phone_address.innerHTML = url;
+	}
 };
 
 submit.onclick = () => update_frame(url_input.value);
