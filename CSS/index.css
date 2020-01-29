@@ -11,8 +11,14 @@ hr {
 	border-radius: 1px;
 }
 
+h2 {
+	margin: 0;
+}
+
+
 h3 {
 	font-weight: normal;
+	margin: 0;
 }
 
 #rotate_button {
@@ -120,18 +126,24 @@ h3 {
 	font-size: 20px;
 }
 
-.content {
-	height: 400px;
+.content_container {
+	height: auto;
+	min-height: 400px;
 	width: 60%;
 	margin: 20px 0 0 20%;
 }
 
-
+.content {
+	position: relative;
+	width: 100;
+	margin: 20px 0 20px 0;
+}
 
 .top_phones {
 	width: 90%;
-	margin: 0 0 0 5%;
+	margin: 20px 0 0 5%;
 }
+
 th {
 	text-align: left;
 	background-color: rgb(39, 39, 66);

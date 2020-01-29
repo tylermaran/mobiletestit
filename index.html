@@ -17,11 +17,13 @@
 
         gtag('config', 'UA-154562513-3');
     </script>
-    
+
 
     <link rel="stylesheet" href="./CSS/index.css">
     <link rel="stylesheet" href="./CSS/header.css">
     <link rel="stylesheet" href="./CSS/mini_phone.css">
+    <link rel="stylesheet" href="./CSS/about.css">
+    <link rel="stylesheet" href="./CSS/footer.css">
 
     <title>Mobile Test it!</title>
 </head>
@@ -31,12 +33,12 @@
     <!-- Header -->
     <div class="header">
         <h1 class="title">mobiletest.it</h1>
-        <h1 class="sub_title">Test mobile responsive web pages.</h1>
-        <h2>iPhone 5/6/7/10, Samsung, Google Pixel, etc.</h2>
+        <h1 class="sub_title">Test mobile responsive web pages for free.</h1>
+        <h2>A mobile friendly website tester</h2>
 
         <div class="input_bar">
             <div class="input_header">
-                Input your URL:
+                Enter your URL:
             </div>
             <input type="text" id="url_input" value="https://www.example.com">
             <div id="add_url">test</div>
@@ -76,7 +78,7 @@
 
     <hr>
 
-    <div class="phone_stats content">
+    <div class="phone_stats content_container">
         <h2>Top phone models of 2020:</h2>
         <h3>The most common phone sizes in the US [2020 Update]</h3>
         <table class="top_phones">
@@ -127,18 +129,31 @@
                 <td>411 x 823</td>
                 <td>3.0</td>
             </tr>
+            <!-- Table Break - iPads -->
             <tr>
                 <td class="tb_space" colspan="3"></td>
-                <!-- <td>Pixel 2 XL</td>
-                <td>411 x 823</td>
-                <td>3.0</td> -->
+            </tr>
+
+            <tr>
+                <td>iPad Pro 9.7-inch</td>
+                <td>769 x 1024</td>
+                <td>2.0</td>
             </tr>
             <tr>
                 <td>iPad Pro 10.5-inch</td>
                 <td>1112 x 834</td>
                 <td>2.0</td>
             </tr>
-            <tr></tr>
+            <tr>
+                <td>iPad Pro 12.9-inch</td>
+                <td>1024 x 1366</td>
+                <td>2.0</td>
+            </tr>
+            <tr>
+                <td>iPad Mini / Air</td>
+                <td>768 x 1024</td>
+                <td>2.0</td>
+            </tr>
         </table>
 
         <div class="annotations">
@@ -146,31 +161,69 @@
             resolution of 1125 x 2436 but 375 x 812 addressable pixels.
         </div>
 
+
+        <div class="content">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam, ducimus deleniti? Quidem ipsa voluptate
+            praesentium impedit iusto, nemo recusandae, reiciendis atque in quia saepe ipsum explicabo ullam odit
+            laudantium repellendus.
+        </div>
+
+        <div class="sources">
+            <a
+                href="https://developer.apple.com/library/archive/documentation/DeviceInformation/Reference/iOSDeviceCompatibility/Displays/Displays.html">iOS
+                Device Compatibility Reference</a>
+        </div>
+
     </div>
 
     <hr>
-
-    <div class="about content">
-        <h2>About the site:</h2>
-        <h3>Mobiletest.it is a free resource to testing mobile responsive web pages.</h3>
-
-        <!-- Place this tag where you want the button to render. -->
-        <a class="github-button" href="https://github.com/tylermaran/mobiletestit"
-            data-color-scheme="no-preference: light; light: light; dark: light;" data-size="large"
-            data-show-count="true" aria-label="Star tylermaran/mobiletestit on GitHub">Star</a>
-    </div>
-
-    <hr>
-
-    <div class="resources content">
+    <!-- Links and additional site content -->
+    <div class="resources content_container">
         <h2>Resources:</h2>
         <h3>Mobiletest.it is a free resource to testing mobile responsive web pages.</h3>
 
-        
     </div>
 
-    <script src="script.js"></script>
+    <hr>
 
+
+    <!-- About the page - buy me a coffee -->
+    <div class="about content_container">
+        <h2>About the site:</h2>
+        <h3>Mobiletest.it is a free resource to testing mobile responsive web pages.</h3>
+
+        <div class="support">
+
+            <!-- Buy me a coffee link -->
+            <div class="kofi_button_container">
+                <script type='text/javascript' src='https://ko-fi.com/widgets/widget_2.js'></script>
+                <script type='text/javascript'>
+                    kofiwidget2.init('developers need coffee', '#19526b', 'C0C61DZQ6'); kofiwidget2.draw();
+                </script>
+            </div>
+            <div class="github_button_container">
+                <!-- Link to github -->
+                <a class="github-button" href="https://github.com/tylermaran/mobiletestit"
+                    data-color-scheme="no-preference: light; light: light; dark: light;" data-size="large"
+                    data-show-count="true" aria-label="Star tylermaran/mobiletestit on GitHub">mobiletest.it</a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        <p><b>MobileTest.it</b></p>
+        <p>License MIT</p>
+        <p><a href="https://github.com/tylermaran/mobiletestit"
+                style="color: inherit;">[github.com/tylermaran/mobiletestit]</a></p>
+                <p><a href="https://www.tylermaran.com/"
+                    style="color: inherit;">[tylermaran.com]</a></p>
+
+    </div>
+
+
+    <!-- Primary JS file -->
+    <script src="script.js"></script>
     <!-- Github Star link -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>
 </body>
