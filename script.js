@@ -38,33 +38,63 @@ let common_models = [
 	},
 ];
 
+
+const highlight_phone = (div) => {
+	
+
+	let temp = document.getElementsByClassName('mini_screen');
+
+	// let selected = document.get
+	for (let i = 0; i < temp.length; i++) {
+		temp[i].style.backgroundColor = 'rgb(112, 112, 112)';
+	}
+	div.firstChild.style.backgroundColor = 'white';
+
+}
+
+// Generate the mini phone divs
 for (let i = 0; i < common_models.length; i++) {
-	let div = document.createElement('div');
-	div.classList.add('mini_phone');
+	let mini_phone_container = document.createElement('div');
+	mini_phone_container.classList.add('mini_phone_container');
+
+	let mini_phone = document.createElement('div');
+	mini_phone.classList.add('mini_phone');
+
+	mini_phone.setAttribute('name', common_models[i].name);
+
+	mini_phone.onclick = function () {
+		highlight_phone(this);
+	};
+
+	let screen = document.createElement('div');
+	screen.classList.add('mini_screen');
+
 	let name = document.createElement('div');
-	let dimensions = document.createElement('div');
 	name.classList.add('mini_name');
 	name.innerText = common_models[i].name;
+
+	let dimensions = document.createElement('div');
 	dimensions.classList.add('mini_dimensions');
 	dimensions.innerText = common_models[i].x + ' x ' + common_models[i].y;
-	div.append(name);
-	div.append(dimensions);
 
-	common_models_div.append(div);
+	mini_phone.append(screen);
+	mini_phone_container.append(mini_phone);
+	mini_phone_container.append(name);
+	mini_phone_container.append(dimensions);
+
+	common_models_div.append(mini_phone_container);
 }
 
 select_common_model.append(common_models_div);
 
 // Rotate screen
 rotate_button.onclick = () => {
-	
 	phone_container.classList.toggle('phone-rotate');
 
 	rotate_button.classList.toggle('rotate_onclick');
-	setTimeout(()=> {
+	setTimeout(() => {
 		rotate_button.classList.toggle('rotate_onclick');
-	}, 200)
-
+	}, 200);
 };
 
 // Add new url to iFrame
@@ -73,13 +103,6 @@ const update_frame = url => {
 
 	iframe.src = 'https://' + url;
 	phone_address.innerHTML = url;
-
-	
 };
 
 submit.onclick = () => update_frame(url_input.value);
-
-window.onerror = (message, source, lineno, colno, error) => {
-	console.log('ERRROOOOORRR');
-	console.log(message);
-}

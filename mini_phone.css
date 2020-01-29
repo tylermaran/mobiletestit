@@ -1,0 +1,30 @@
+#select_common_model {
+	text-align: center;
+}
+
+.mini_phone_container {
+	display: inline-block;
+}
+
+.mini_phone {
+	height: 200px;
+	width: 110px;
+	background-color: black;
+	border-radius: 10px;
+	margin: 40px 40px 10px 40px;
+	overflow: hidden;
+	color: white;
+	border: 2px solid grey;
+}
+
+.mini_screen {
+	height: 85%;
+	width: 85%;
+	background-color: rgb(112, 112, 112);
+	margin: 10px auto;
+	border-radius: 3px;
+}
+
+.mini_phone:hover {
+	cursor: pointer;
+}

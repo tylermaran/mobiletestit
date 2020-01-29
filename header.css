@@ -1,9 +1,11 @@
 
 .title {
 	text-align: left;
-	margin: 0;
-	font-style: italic;
-	/* display: inline; */
+	margin: 0 0 0 20px;
+	text-decoration: underline;	
+}
+.title:hover {
+	cursor: pointer;
 }
 
 .header {
