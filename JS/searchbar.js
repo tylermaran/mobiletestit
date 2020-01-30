@@ -1,3 +1,5 @@
+let iframe = document.getElementById('iframe');
+let iframe_hz = document.getElementById('iframe_hz');
 let url_input = document.getElementById('url_input');
 let http_select = document.getElementById('http_select');
 let submit = document.getElementById('add_url');
@@ -26,14 +28,15 @@ const switch_http = () => {
 
 // Add new url to iFrame
 const update_frame = url => {
+	console.log('clocked');
 	if (url.split('//')[1]) {
-		
 		iframe.src = 'https://' + url.split('//')[1];
+		iframe_hz.src = 'https://' + url.split('//')[1];
 		phone_address.innerHTML = url.split('//')[1];
 	}
 	else {
-		console.log(url)
 		iframe.src = 'https://' + url;
+		iframe_hz.src = 'https://' + url;
 		phone_address.innerHTML = url;
 	}
 };

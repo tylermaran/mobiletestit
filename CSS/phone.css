@@ -1,4 +1,21 @@
 
+.phone_outer_container {
+	height: 850px;
+	overflow: hidden;
+}
+
+#phone_container, #phone_container_hz {
+	margin: 0 auto 0 auto;
+	background-color: black;
+	border-radius: 30px;
+	border: 4px double rgb(107, 107, 107);
+
+	-webkit-box-shadow: inset 0px 0px 5px 5px rgba(255, 255, 255, 0.25);
+	-moz-box-shadow: inset 0px 0px 5px 5px rgba(255, 255, 255, 0.25);
+	box-shadow: inset 0px 0px 5px 5px rgba(255, 255, 255, 0.25);
+}
+
+
 #phone_container {
 	margin: 0 auto 0 auto;
 	background-color: black;
@@ -11,7 +28,7 @@
 	-moz-box-shadow: inset 0px 0px 5px 5px rgba(255, 255, 255, 0.25);
 	box-shadow: inset 0px 0px 5px 5px rgba(255, 255, 255, 0.25);
 
-	transition: transform 0.5s linear;
+	transition: transform 0.25s linear;
 	transform-origin: center center;
 }
 
@@ -27,12 +44,11 @@
 	width: 375px;
 }
 
-#iframe {
+#iframe, #iframe_hz {
 	position: relative;
 	height: 100%;
 	width: 100%;
 }
-
 
 #phone_time,
 #phone_address {
@@ -70,4 +86,30 @@
 	-webkit-box-shadow: inset 0px 0px 2px 2px rgba(255, 255, 255, 0.25);
 	-moz-box-shadow: inset 0px 0px 2px 2px rgba(255, 255, 255, 0.25);
 	box-shadow: inset 0px 0px 2px 2px rgba(255, 255, 255, 0.25);
+}
+
+
+#phone_container_hz {
+	margin: 16% auto;
+	display: inline-block;
+	display: none;
+	background-color: black;
+	width: 831px;
+	height: 400px;
+
+
+	transition: transform 0.25s linear;
+	transform-origin: center center;
+}
+
+.phone-rotate_hz {
+	transform: rotate(-90deg);
+}
+
+#view_container_hz {
+	margin: 15px auto;
+	background-color: white;
+	overflow: hidden;
+	height: 375px;
+	width: 667px;
 }

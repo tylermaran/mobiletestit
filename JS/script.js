@@ -1,12 +1,11 @@
-let iframe = document.getElementById('iframe');
-let iframe_horizontal = document.getElementById('iframe_horizontal');
 let phone_time = document.getElementById('phone_time');
 let rotate_button = document.getElementById('rotate_button');
 let phone_container = document.getElementById('phone_container');
 let view_container = document.getElementById('view_container');
 let select_common_model = document.getElementById('select_common_model');
+let phone_container_hz = document.getElementById('phone_container_hz');
 let common_models_div = document.createElement('div');
-let flip;
+let flip = true;
 
 let common_models = [
 	{
@@ -83,13 +82,32 @@ select_common_model.append(common_models_div);
 
 // Rotate screen
 rotate_button.onclick = () => {
-	phone_container.classList.toggle('phone-rotate');
+	if (flip) {
+		phone_container.classList.add('phone-rotate');
+		phone_container_hz.classList.remove('phone-rotate_hz');
 
-	setTimeout(() => {
-		iframe.style.display = 'none';
-		iframe_horizontal.style.display = "block";
+		setTimeout(() => {
+			phone_container.style.display = 'none';
+			phone_container_hz.style.display = 'block';
+			flip = false;
+		}, 250);
 
-	},500)
+	} else {
+		phone_container_hz.classList.add('phone-rotate_hz');
+		phone_container.classList.remove('phone-rotate');
+
+		setTimeout(() => {
+			phone_container.style.display = 'block';
+			phone_container_hz.style.display = 'none';
+			flip = true;
+		}, 250);
+	}
+
+	// setTimeout(() => {
+	// 	phone_container.style.display = 'none';
+	// 	phone_container_hz.style.display = "block";
+	// 	flip = true;
+	// },250)
 
 	rotate_button.classList.toggle('rotate_onclick');
 	setTimeout(() => {
