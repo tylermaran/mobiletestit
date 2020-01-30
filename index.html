@@ -36,12 +36,15 @@
         <h1 class="sub_title">Test mobile responsive web pages for free.</h1>
         <h2>A mobile friendly website tester</h2>
 
+        <div class="input_header">
+            Enter your URL:
+        </div>
         <div class="input_bar">
-            <div class="input_header">
-                Enter your URL:
+           <div id="http_select" onclick="switch_http()">
+                https://
             </div>
-            <input type="text" id="url_input" value="https://www.example.com">
-            <div id="add_url">test</div>
+            <input type="text" id="url_input" value="www.example.com">
+            <div id="add_url">go</div>
         </div>
         <div class="common_links">
             Try:
@@ -74,6 +77,7 @@
     <!-- Top Phone Models -->
     <div id="select_common_model">
         <h3 class="small_header">Most popular phones:</h3>
+        <noscript style="color: red;">[Phone switcher requires javascript]</noscript>
     </div>
 
     <hr>

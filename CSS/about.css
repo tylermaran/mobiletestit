@@ -1,11 +1,10 @@
 .support {
-    
+    text-align: center;
+    margin: 50px 0 0 0;
 }
 
-.kofi_button_container {
-   width: 20%;
-}
+.kofi_button_container,
 .github_button_container {
-    width: 20%;
+	margin: 0 0 0 40%;
+	width: 20%;
 }
-

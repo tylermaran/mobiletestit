@@ -8,12 +8,27 @@ let phone_container = document.getElementById('phone_container');
 let view_container = document.getElementById('view_container');
 let select_common_model = document.getElementById('select_common_model');
 let common_models_div = document.createElement('div');
-let flip;
+let http_select = document.getElementById('http_select');
+let flip, https = true;
 
 const localhost = port => {
 	console.log(port);
 	url_input.value = 'localhost:' + port;
+	http_select.innerText =  'http://';
+	https = false;
 };
+
+const switch_http = () => {
+	console.log('yyiashvoja');
+	if (https) {
+		http_select.innerText = 'http://';
+		https= false;
+	} else {
+		http_select.innerText = 'https://';
+
+		https = true;
+	}
+}
 
 let common_models = [
 	{
