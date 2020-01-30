@@ -32,7 +32,7 @@
 
     <!-- Header -->
     <div class="header">
-        <h1 class="title">mobiletest.it</h1>
+        <h1 class="title no_select">mobiletest.it</h1>
         <h1 class="sub_title">Test mobile responsive web pages for free.</h1>
         <h2>A mobile friendly website tester</h2>
 
@@ -40,11 +40,11 @@
             Enter your URL:
         </div>
         <div class="input_bar">
-           <div id="http_select" onclick="switch_http()">
+            <div id="http_select" class="no_select" onclick="switch_http()">
                 https://
             </div>
             <input type="text" id="url_input" value="www.example.com">
-            <div id="add_url">go</div>
+            <div id="add_url" class="no_select">go</div>
         </div>
         <div class="common_links">
             Try:
@@ -56,6 +56,17 @@
             </div>
         </div>
 
+    </div>
+
+    <div class="mobile_header">
+        <h1 class="title no_select">mobiletest.it</h1>
+        <p class="mobile_message">
+            Unfortunately - mobiletest.it doesn't work particularly well on mobile.
+
+            <p class="mobile_message"> One of the main requirements for
+                displaying a mobile phone is a screen size that is larger than said mobile phone.</p>
+
+        <p class="mobile_message">Feel free to check out all of our articles however</p>
     </div>
 
     <!-- Phone display -->
@@ -167,9 +178,8 @@
 
 
         <div class="content">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam, ducimus deleniti? Quidem ipsa voluptate
-            praesentium impedit iusto, nemo recusandae, reiciendis atque in quia saepe ipsum explicabo ullam odit
-            laudantium repellendus.
+            A major component of responsive design is creating the right experience for the right device. The above list
+            of devices is a good reflection of the US smartphone market.
         </div>
 
         <div class="sources">
@@ -185,6 +195,16 @@
     <div class="resources content_container">
         <h2>Resources:</h2>
         <h3>Mobiletest.it is a free resource to testing mobile responsive web pages.</h3>
+        <div class="content">
+            <ul>
+                <li>Use google analytics to find devices <a
+                        href="https://crossbrowsertesting.com/blog/development/use-google-analytics-find-devices-customers-use/">[Link]</a>
+                </li>
+                <li>Media queries</li>
+                <li>React - dynamically render components based on viewport</li>
+                <li>Most common phones in the US</li>
+            </ul>
+        </div>
 
     </div>
 
@@ -205,6 +225,7 @@
                     kofiwidget2.init('developers need coffee', '#19526b', 'C0C61DZQ6'); kofiwidget2.draw();
                 </script>
             </div>
+            <br>
             <div class="github_button_container">
                 <!-- Link to github -->
                 <a class="github-button" href="https://github.com/tylermaran/mobiletestit"
@@ -216,12 +237,12 @@
     </div>
 
     <div class="footer">
-        <p><b>MobileTest.it</b></p>
+        <p class="footer_title">mobiletest.it</p>
         <p>License MIT</p>
-        <p><a href="https://github.com/tylermaran/mobiletestit"
-                style="color: inherit;">[github.com/tylermaran/mobiletestit]</a></p>
-                <p><a href="https://www.tylermaran.com/"
-                    style="color: inherit;">[tylermaran.com]</a></p>
+        <div class="footer_link"><a href="https://github.com/tylermaran/mobiletestit"
+                style="color: inherit;">[github.com/tylermaran/mobiletestit]</a></div class="footer_link">
+        <div class="footer_link"><a href="https://www.tylermaran.com/" style="color: inherit;">[tylermaran.com]</a>
+        </div>
 
     </div>
 

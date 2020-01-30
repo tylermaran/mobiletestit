@@ -5,6 +5,7 @@
 
 .kofi_button_container,
 .github_button_container {
-	margin: 0 0 0 40%;
-	width: 20%;
+    display: inline-block;
+	/* margin: 0 0 0 40%;
+	width: 20%; */
 }
