@@ -24,6 +24,7 @@
     <link rel="stylesheet" href="./CSS/mini_phone.css">
     <link rel="stylesheet" href="./CSS/about.css">
     <link rel="stylesheet" href="./CSS/footer.css">
+    <link rel="stylesheet" href="./CSS/phone.css">
 
     <title>Mobile Test it!</title>
 </head>
@@ -66,7 +67,7 @@
             <p class="mobile_message"> One of the main requirements for
                 displaying a mobile phone is a screen size that is larger than said mobile phone.</p>
 
-        <p class="mobile_message">Feel free to check out all of our articles however</p>
+            <p class="mobile_message">Feel free to check out all of our articles however</p>
     </div>
 
     <!-- Phone display -->
@@ -77,6 +78,9 @@
         <div id="phone_address">www.example.com</div>
         <div id="view_container">
             <iframe src="https://www.example.com" id="iframe" frameborder="0" scrolling="yes"></iframe>
+            <iframe src="https://www.example.com" id="iframe_horizontal" frameborder="0" scrolling="yes"
+                style="display: none;"></iframe>
+
         </div>
         <div class="iphone_home"></div>
     </div>
@@ -248,7 +252,8 @@
 
 
     <!-- Primary JS file -->
-    <script src="script.js"></script>
+    <script src="./JS/script.js"></script>
+    <script src="./JS/searchbar.js"></script>
     <!-- Github Star link -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>
 </body>

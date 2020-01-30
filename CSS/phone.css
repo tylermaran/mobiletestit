@@ -1,0 +1,73 @@
+
+#phone_container {
+	margin: 0 auto 0 auto;
+	background-color: black;
+	width: 400px;
+	border-radius: 30px;
+	padding: 10px 0 20px 0;
+	border: 4px double rgb(107, 107, 107);
+
+	-webkit-box-shadow: inset 0px 0px 5px 5px rgba(255, 255, 255, 0.25);
+	-moz-box-shadow: inset 0px 0px 5px 5px rgba(255, 255, 255, 0.25);
+	box-shadow: inset 0px 0px 5px 5px rgba(255, 255, 255, 0.25);
+
+	transition: transform 0.5s linear;
+	transform-origin: center center;
+}
+
+.phone-rotate {
+	transform: rotate(90deg);
+}
+
+#view_container {
+	margin: 0 auto;
+	background-color: white;
+	overflow: hidden;
+	height: 667px;
+	width: 375px;
+}
+
+#iframe {
+	position: relative;
+	height: 100%;
+	width: 100%;
+}
+
+
+#phone_time,
+#phone_address {
+	height: 10px;
+	width: 375px;
+	margin: 0 0 0 50%;
+	transform: translate(-50%, 0);
+	font-size: 10px;
+	font-weight: bold;
+	color: white;
+	text-align: center;
+	background-color: rgb(77, 77, 77);
+}
+
+#phone {
+	height: 667px;
+	width: 395px;
+}
+
+.phone_volume {
+	height: 2px;
+	width: 20%;
+	background-color: rgb(53, 53, 53);
+	margin: 20px auto;
+}
+
+.iphone_home {
+	height: 50px;
+	width: 50px;
+	border-radius: 30px;
+	background-color: black;
+	margin: 10px 0 0 50%;
+	transform: translate(-50%, 0);
+	border: 2px solid rgb(53, 53, 53);
+	-webkit-box-shadow: inset 0px 0px 2px 2px rgba(255, 255, 255, 0.25);
+	-moz-box-shadow: inset 0px 0px 2px 2px rgba(255, 255, 255, 0.25);
+	box-shadow: inset 0px 0px 2px 2px rgba(255, 255, 255, 0.25);
+}

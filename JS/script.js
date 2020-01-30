@@ -1,34 +1,12 @@
-let submit = document.getElementById('add_url');
 let iframe = document.getElementById('iframe');
-let url_input = document.getElementById('url_input');
+let iframe_horizontal = document.getElementById('iframe_horizontal');
 let phone_time = document.getElementById('phone_time');
-let phone_address = document.getElementById('phone_address');
 let rotate_button = document.getElementById('rotate_button');
 let phone_container = document.getElementById('phone_container');
 let view_container = document.getElementById('view_container');
 let select_common_model = document.getElementById('select_common_model');
 let common_models_div = document.createElement('div');
-let http_select = document.getElementById('http_select');
-let flip, https = true;
-
-const localhost = port => {
-	console.log(port);
-	url_input.value = 'localhost:' + port;
-	http_select.innerText =  'http://';
-	https = false;
-};
-
-const switch_http = () => {
-	console.log('yyiashvoja');
-	if (https) {
-		http_select.innerText = 'http://';
-		https= false;
-	} else {
-		http_select.innerText = 'https://';
-
-		https = true;
-	}
-}
+let flip;
 
 let common_models = [
 	{
@@ -107,24 +85,14 @@ select_common_model.append(common_models_div);
 rotate_button.onclick = () => {
 	phone_container.classList.toggle('phone-rotate');
 
+	setTimeout(() => {
+		iframe.style.display = 'none';
+		iframe_horizontal.style.display = "block";
+
+	},500)
+
 	rotate_button.classList.toggle('rotate_onclick');
 	setTimeout(() => {
 		rotate_button.classList.toggle('rotate_onclick');
 	}, 200);
 };
-
-// Add new url to iFrame
-const update_frame = url => {
-	if (url.split('//')[1]) {
-		
-		iframe.src = 'https://' + url.split('//')[1];
-		phone_address.innerHTML = url.split('//')[1];
-	}
-	else {
-		console.log(url)
-		iframe.src = 'https://' + url;
-		phone_address.innerHTML = url;
-	}
-};
-
-submit.onclick = () => update_frame(url_input.value);
