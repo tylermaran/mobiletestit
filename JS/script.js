@@ -41,7 +41,7 @@ let current_phone = {
 	name: 'iPhone 6/7/8',
 	x: 375,
 	y: 667,
-}
+};
 
 // Onclick function for each mini phone
 const select_phone = div => {
@@ -50,7 +50,7 @@ const select_phone = div => {
 	let phone_y = div.getAttribute('y');
 
 	let phone_model_text = phone_name + ' : ' + phone_x + ' x ' + phone_y;
-	console.log(phone_model_text); 
+	console.log(phone_model_text);
 	phone_model.innerText = phone_model_text;
 
 	let temp = document.getElementsByClassName('mini_screen');
@@ -74,13 +74,17 @@ for (let i = 0; i < common_models.length; i++) {
 	mini_phone.setAttribute('x', common_models[i].x);
 	mini_phone.setAttribute('y', common_models[i].y);
 
-
 	mini_phone.onclick = function() {
 		select_phone(this);
 	};
 
 	let screen = document.createElement('div');
 	screen.classList.add('mini_screen');
+
+	if ((common_models[i].name === 'iPhone 6/7/8')) {
+		console.log('yup');
+		screen.style.backgroundColor = 'white';
+	}
 
 	let name = document.createElement('div');
 	name.classList.add('mini_name');
@@ -111,7 +115,6 @@ rotate_button.onclick = () => {
 			phone_container_hz.style.display = 'block';
 			flip = false;
 		}, 250);
-
 	} else {
 		phone_container_hz.classList.add('phone-rotate_hz');
 		phone_container.classList.remove('phone-rotate');

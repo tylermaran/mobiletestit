@@ -89,13 +89,12 @@
 
 
 #phone_container_hz {
-	margin: 16% auto;
+	margin: 12% auto;
 	display: inline-block;
 	display: none;
 	background-color: black;
 	width: 831px;
 	height: 400px;
-
 
 	transition: transform 0.25s linear;
 	transform-origin: center center;
