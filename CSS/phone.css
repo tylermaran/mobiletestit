@@ -115,13 +115,11 @@
 
 
 .iphone_home_hz {
-	display: inline-block;
 	height: 50px;
 	width: 50px;
 	border-radius: 30px;
 	background-color: black;
-	/* margin: 50% 0 0 10px; */
-	/* transform: translate(0, 50%); */
+	margin: -225px 0 0 10px;
 	border: 2px solid rgb(53, 53, 53);
 	-webkit-box-shadow: inset 0px 0px 2px 2px rgba(255, 255, 255, 0.25);
 	-moz-box-shadow: inset 0px 0px 2px 2px rgba(255, 255, 255, 0.25);

@@ -1,6 +1,7 @@
 let phone_time = document.getElementById('phone_time');
 let rotate_button = document.getElementById('rotate_button');
 let phone_container = document.getElementById('phone_container');
+let phome_model = document.getElementById('phone_model');
 let view_container = document.getElementById('view_container');
 let select_common_model = document.getElementById('select_common_model');
 let phone_container_hz = document.getElementById('phone_container_hz');
@@ -42,11 +43,15 @@ let current_phone = {
 	y: 667,
 }
 
-
+// Onclick function for each mini phone
 const select_phone = div => {
-	console.log(div.getAttribute('name'));
-	console.log(div.getAttribute('x'));
-	console.log(div.getAttribute('y'));
+	let phone_name = div.getAttribute('name');
+	let phone_x = div.getAttribute('x');
+	let phone_y = div.getAttribute('y');
+
+	let phone_model_text = phone_name + ' : ' + phone_x + ' x ' + phone_y;
+	console.log(phone_model_text); 
+	phone_model.innerText = phone_model_text;
 
 	let temp = document.getElementsByClassName('mini_screen');
 
@@ -117,12 +122,6 @@ rotate_button.onclick = () => {
 			flip = true;
 		}, 250);
 	}
-
-	// setTimeout(() => {
-	// 	phone_container.style.display = 'none';
-	// 	phone_container_hz.style.display = "block";
-	// 	flip = true;
-	// },250)
 
 	rotate_button.classList.toggle('rotate_onclick');
 	setTimeout(() => {
