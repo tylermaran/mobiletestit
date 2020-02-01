@@ -35,7 +35,19 @@ let common_models = [
 	},
 ];
 
-const highlight_phone = div => {
+// Global variables are bad. but like - how bad could they be?
+let current_phone = {
+	name: 'iPhone 6/7/8',
+	x: 375,
+	y: 667,
+}
+
+
+const select_phone = div => {
+	console.log(div.getAttribute('name'));
+	console.log(div.getAttribute('x'));
+	console.log(div.getAttribute('y'));
+
 	let temp = document.getElementsByClassName('mini_screen');
 
 	// let selected = document.get
@@ -54,9 +66,12 @@ for (let i = 0; i < common_models.length; i++) {
 	mini_phone.classList.add('mini_phone');
 
 	mini_phone.setAttribute('name', common_models[i].name);
+	mini_phone.setAttribute('x', common_models[i].x);
+	mini_phone.setAttribute('y', common_models[i].y);
+
 
 	mini_phone.onclick = function() {
-		highlight_phone(this);
+		select_phone(this);
 	};
 
 	let screen = document.createElement('div');
